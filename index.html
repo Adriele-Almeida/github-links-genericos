@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050505">
+<title>GitHub Links Genéricos</title>
+<style>
+:root{color-scheme:dark;--bg:#050505;--panel:#171717;--lime:#C2E300;--line:#30342e;--ink:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif}
+main{max-width:1060px;margin:0 auto;padding:36px 22px 50px}
+header{display:flex;align-items:center;gap:15px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.led{width:5px;height:38px;border-radius:8px;background:var(--lime);box-shadow:0 0 15px #c2e30070}
+h1{margin:0;font-size:clamp(19px,2.3vw,26px);font-weight:750;letter-spacing:-.6px}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:24px}
+.item{display:flex;align-items:center;gap:8px;min-width:0;border:1px solid #282c25;border-radius:13px;padding:9px;background:linear-gradient(145deg,#161916,#0e100e);box-shadow:inset 0 1px #ffffff0b}
+.mainbtn{display:flex;align-items:center;gap:12px;flex:1;min-width:0;min-height:44px;padding:10px 13px;border-radius:9px;border:1px solid #343c27;border-bottom:3px solid #0b0d09;background:linear-gradient(156deg,#32382a,#1b2019 55%,#141813);color:#fff;text-decoration:none;font-size:12px;font-weight:650;box-shadow:inset 0 1px #ffffff20,0 2px 4px #0008}
+.mainbtn:hover,.mini:hover{border-color:var(--lime);filter:brightness(1.16)}
+.mainbtn:focus-visible,.mini:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.mainbtn:active,.mini:active{transform:translateY(2px)}
+.dot{width:6px;height:6px;flex-shrink:0;border-radius:50%;background:var(--lime);box-shadow:0 0 7px var(--lime)}
+.name{overflow-wrap:anywhere;line-height:1.4}
+.tools{display:flex;gap:6px;flex-shrink:0}
+.mini{width:33px;height:33px;display:grid;place-items:center;cursor:pointer;border:1px solid #404a35;border-bottom:2px solid #0c100a;border-radius:8px;color:var(--lime);background:linear-gradient(150deg,#30372b,#171b16);box-shadow:inset 0 1px #ffffff25,0 2px 3px #000a;text-decoration:none;padding:0}
+.mini svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.mini.done{color:white;border-color:var(--lime);background:#405000}
+@media(max-width:790px){.list{grid-template-columns:1fr}}
+@media(max-width:410px){main{padding:22px 10px}.item{padding:6px;gap:5px}.tools{gap:4px}.mini{width:30px;height:32px}.mainbtn{padding:9px;font-size:11px;gap:8px}}
+</style>
+</head>
+<body>
+<main>
+<header><span class="led"></span><h1>GitHub Links Genéricos</h1></header>
+<section id="links" class="list"></section>
+</main>
+<script>
+const nomes=["teste","codigo-alerta","appimagemfacil-lp","Receita-de-Massa-","Home---O-C-digo-do-Novo-Digital","Novo-Codigo","adriele-almeida.github.io","Intelig-ncia-Artificial","Treinamento-Ao-Vivo","ManyChat---App-Site---Landing-Page-","Grupo-Oficial-Alunos","Imers-o---O-Maestro","teste-netlify","Publico-Renda-extra","02-Teste-de-Campanha","novo","Guia-Github","Guia-Github-Passo-a-Passo","planilha-educacao","30-dias-positivo","guia-github2","Claude-Descodificado","Arquiteto-de-iscas","conteudo","conteudo-novo","Metodo-de-Grava-o-de-Curso-APP","Instagram-Imobiliario","instagram-zero","prompt","estrategista-digital","conteudo-30-dias","projeto-chatGPT","app-lojaclimabet","Hub-GPTs","ordem-progresso","gerador-laudo","gpts","produtividade","produtividade2","template-automatico","rascunho-01","rascunho-02","rascunho-03","story-template","1","2","3","4","ferramentas","dossie","quebra-legenda","repositorios-github","fluxo","sistema","iron-briefing","estudo","JM-canva","meu-ebook","ebook-1","ebook-2","ebook-3","fluxo-conteudo","diagramador-antigo","lima","dashboard-postagens","execucao","metricas-JM-2026","meu-hub-de-links","meu-hub-de-links-01","meu-hub-de-links-v3","atalhos","execucao-V2","dashboard-postagens-fase-1","atalhos-v2","icasas-template","como-vender-no-instagram","chatgpt-turbinar-instagram","70-codigos","grok-social-midia","teste-grok","boas-novas","turbinar-guia-instagram","nexo","Ebook-Codex","guardiao-neural","turbinar-checklist","turbinar-no-instagram","nuvem-codex","dash-exec","hub-de-execucao","social-media","base-operacional","Central-privada","agenda","agenda-codex","Grok-Planejador-de-vida","Grok-Neuroplasticidade","Grok-Projeto-Adriele-Almeida","Grok-Fila-de-Tarefas","Grok-Frases-Motivacionais","Grok-Gerador-de-Paleta-de-Cores","Grok-Calendario-Social-Media","Grok-Regras","biblioteca-de-prompts","diagramador","personnalite-triagem","iron-supply-triagem","vitrine-iron-supply","vitrine-iron-supply-v2","comparador-imagens","legendas-iron-supply","calendario-posts-iron-supply","historico-outubro-chatgpt","grok-brush-prairie-autumn-shale","ConvoFlow","ConvoFlow-Independente","postador-instagram-pub","espaco-trabalho-nuvem-2026-10-22","grok-ember-breeze-wind-storm","grok-bloom-storm-zest-yarrow","biblioteca-python","ai-copywriter","time-de-conteudo","claude-repurpose","postador-instagram","hub-adriele","tarefas","agenda-pessoal","iron-supply-programacao","central-construtor","iron-supply-postagem-v2","painel-postagem","catalogo-pypi","app-vercel","app-vercel-2","sinal","sinal-02","volt","central-adriele"];
+const root=document.getElementById('links');
+const icones={
+copiar:'<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>',
+repositorio:'<svg viewBox="0 0 24 24"><path d="M9 19c-5 1-5-3-7-4m14 6v-3.8c0-1.1-.4-1.9-1-2.3 3.1-.35 6-1.4 6-7A5.5 5.5 0 0 0 19.5 4 5 5 0 0 0 19.4 1s-1.2-.4-3.8 1.5a13 13 0 0 0-7.2 0C5.8.6 4.6 1 4.6 1A5 5 0 0 0 4.5 4 5.5 5.5 0 0 0 3 7.9c0 5.6 2.9 6.65 6 7-.6.4-1 1.2-1 2.3V21"/></svg>',
+abrir:'<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>'
+};
+async function copiar(valor,botao){
+try{await navigator.clipboard.writeText(valor)}catch(e){const t=document.createElement('textarea');t.value=valor;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+botao.classList.add('done');setTimeout(()=>botao.classList.remove('done'),900)
+}
+function mini(icone,rotulo,link){
+const el=link?document.createElement('a'):document.createElement('button');
+el.className='mini';el.innerHTML=icones[icone];el.title=rotulo;el.setAttribute('aria-label',rotulo);
+if(link){el.href=link;el.target='_blank';el.rel='noopener noreferrer'}else{el.type='button'}
+return el
+}
+const fragment=document.createDocumentFragment();
+nomes.forEach(nome=>{
+const site=nome.toLowerCase()==='adriele-almeida.github.io'?'https://adriele-almeida.github.io/':'https://adriele-almeida.github.io/'+encodeURIComponent(nome)+'/';
+const repositorio='https://github.com/Adriele-Almeida/'+encodeURIComponent(nome);
+const item=document.createElement('div');item.className='item';
+const principal=document.createElement('a');principal.className='mainbtn';principal.href=site;principal.target='_blank';principal.rel='noopener noreferrer';principal.title='Abrir site';
+const led=document.createElement('span');led.className='dot';const titulo=document.createElement('span');titulo.className='name';titulo.textContent=nome;principal.append(led,titulo);
+const ferramentas=document.createElement('div');ferramentas.className='tools';
+const copiarSite=mini('copiar','Copiar link do site');copiarSite.addEventListener('click',()=>copiar(site,copiarSite));
+const abrirRepo=mini('repositorio','Abrir repositório',repositorio);
+const copiarRepo=mini('copiar','Copiar link do repositório');copiarRepo.addEventListener('click',()=>copiar(repositorio,copiarRepo));
+ferramentas.append(copiarSite,abrirRepo,copiarRepo);item.append(principal,ferramentas);fragment.append(item)
+});
+root.append(fragment);
+</script>
+</body>
+</html>
