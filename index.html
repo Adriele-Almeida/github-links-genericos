@@ -27,20 +27,52 @@ h1{margin:0;font-size:clamp(19px,2.3vw,26px);font-weight:750;letter-spacing:-.6p
 .mini.done{color:white;border-color:var(--lime);background:#405000}
 @media(max-width:790px){.list{grid-template-columns:1fr}}
 @media(max-width:410px){main{padding:22px 10px}.item{padding:6px;gap:5px}.tools{gap:4px}.mini{width:30px;height:32px}.mainbtn{padding:9px;font-size:11px;gap:8px}}
+
+.controls{display:flex;gap:10px;align-items:center;margin-top:22px}
+.searchbox{display:flex;align-items:center;gap:10px;flex:1;min-width:0;border:1px solid #424b35;border-radius:10px;padding:0 13px;background:linear-gradient(160deg,#1d221a,#121512);min-height:43px}
+.searchbox svg{width:17px;height:17px;stroke:var(--lime);stroke-width:2;fill:none;flex-shrink:0}
+.searchbox input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#fff;font-family:inherit;font-size:13px}
+.searchbox:focus-within{border-color:var(--lime)}
+.searchbox input::placeholder{color:#8c9785}
+.favfilter{display:flex;gap:7px;align-items:center;justify-content:center;cursor:pointer;border:1px solid #424b35;border-bottom:3px solid #10150c;border-radius:9px;background:linear-gradient(160deg,#30372a,#1a2017);color:#f5f7f3;box-shadow:inset 0 1px #ffffff20;padding:0 13px;min-height:43px;font:600 12px Inter,"Segoe UI",Arial,sans-serif;white-space:nowrap}
+.favfilter svg{width:16px;height:16px;stroke:var(--lime);stroke-width:1.9;fill:none}
+.favfilter.active{border-color:var(--lime);color:var(--lime)}
+.favfilter.active svg{fill:var(--lime)}
+.favfilter:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.mini.favorite svg{fill:none}
+.mini.favorite.active{color:var(--lime);border-color:var(--lime)}
+.mini.favorite.active svg{fill:var(--lime)}
+@media(max-width:410px){.controls{gap:6px}.searchbox{padding:0 9px}.favfilter{padding:0 9px;font-size:11px}.mini{width:27px;height:30px}.tools{gap:3px}.item{gap:4px}}
 </style>
 </head>
 <body>
 <main>
 <header><span class="led"></span><h1>GitHub Links Genéricos</h1></header>
+<div class="controls">
+  <label class="searchbox" for="busca"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="busca" type="search" placeholder="Pesquisar por nome" autocomplete="off" aria-label="Pesquisar repositórios por nome"></label>
+  <button id="filtroFavoritos" class="favfilter" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 3 6.1 6.7 1-4.85 4.7 1.15 6.7L12 17.85 6 21l1.15-6.7L2.3 9.6l6.7-1Z"/></svg>Favoritos</button>
+</div>
 <section id="links" class="list"></section>
 </main>
 <script>
 const nomes=["teste","codigo-alerta","appimagemfacil-lp","Receita-de-Massa-","Home---O-C-digo-do-Novo-Digital","Novo-Codigo","adriele-almeida.github.io","Intelig-ncia-Artificial","Treinamento-Ao-Vivo","ManyChat---App-Site---Landing-Page-","Grupo-Oficial-Alunos","Imers-o---O-Maestro","teste-netlify","Publico-Renda-extra","02-Teste-de-Campanha","novo","Guia-Github","Guia-Github-Passo-a-Passo","planilha-educacao","30-dias-positivo","guia-github2","Claude-Descodificado","Arquiteto-de-iscas","conteudo","conteudo-novo","Metodo-de-Grava-o-de-Curso-APP","Instagram-Imobiliario","instagram-zero","prompt","estrategista-digital","conteudo-30-dias","projeto-chatGPT","app-lojaclimabet","Hub-GPTs","ordem-progresso","gerador-laudo","gpts","produtividade","produtividade2","template-automatico","rascunho-01","rascunho-02","rascunho-03","story-template","1","2","3","4","ferramentas","dossie","quebra-legenda","repositorios-github","fluxo","sistema","iron-briefing","estudo","JM-canva","meu-ebook","ebook-1","ebook-2","ebook-3","fluxo-conteudo","diagramador-antigo","lima","dashboard-postagens","execucao","metricas-JM-2026","meu-hub-de-links","meu-hub-de-links-01","meu-hub-de-links-v3","atalhos","execucao-V2","dashboard-postagens-fase-1","atalhos-v2","icasas-template","como-vender-no-instagram","chatgpt-turbinar-instagram","70-codigos","grok-social-midia","teste-grok","boas-novas","turbinar-guia-instagram","nexo","Ebook-Codex","guardiao-neural","turbinar-checklist","turbinar-no-instagram","nuvem-codex","dash-exec","hub-de-execucao","social-media","base-operacional","Central-privada","agenda","agenda-codex","Grok-Planejador-de-vida","Grok-Neuroplasticidade","Grok-Projeto-Adriele-Almeida","Grok-Fila-de-Tarefas","Grok-Frases-Motivacionais","Grok-Gerador-de-Paleta-de-Cores","Grok-Calendario-Social-Media","Grok-Regras","biblioteca-de-prompts","diagramador","personnalite-triagem","iron-supply-triagem","vitrine-iron-supply","vitrine-iron-supply-v2","comparador-imagens","legendas-iron-supply","calendario-posts-iron-supply","historico-outubro-chatgpt","grok-brush-prairie-autumn-shale","ConvoFlow","ConvoFlow-Independente","postador-instagram-pub","espaco-trabalho-nuvem-2026-10-22","grok-ember-breeze-wind-storm","grok-bloom-storm-zest-yarrow","biblioteca-python","ai-copywriter","time-de-conteudo","claude-repurpose","postador-instagram","hub-adriele","tarefas","agenda-pessoal","iron-supply-programacao","central-construtor","iron-supply-postagem-v2","painel-postagem","catalogo-pypi","app-vercel","app-vercel-2","sinal","sinal-02","volt","central-adriele"];
+nomes.sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:'base',numeric:true}));
 const root=document.getElementById('links');
+const busca=document.getElementById('busca');
+const botaoFavoritos=document.getElementById('filtroFavoritos');
+const chaveFavoritos='github-links-genericos-favoritos';
+let favoritos;
+try { const v=JSON.parse(localStorage.getItem(chaveFavoritos)||'[]'); favoritos=new Set(Array.isArray(v)?v.filter(n=>nomes.includes(n)):[]); }
+catch(e){ favoritos=new Set(); }
+let somenteFavoritos=false;
+const normalizar=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
+function salvarFavoritos(){try{localStorage.setItem(chaveFavoritos,JSON.stringify([...favoritos]));}catch(e){}}
+
 const icones={
 copiar:'<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>',
 repositorio:'<svg viewBox="0 0 24 24"><path d="M9 19c-5 1-5-3-7-4m14 6v-3.8c0-1.1-.4-1.9-1-2.3 3.1-.35 6-1.4 6-7A5.5 5.5 0 0 0 19.5 4 5 5 0 0 0 19.4 1s-1.2-.4-3.8 1.5a13 13 0 0 0-7.2 0C5.8.6 4.6 1 4.6 1A5 5 0 0 0 4.5 4 5.5 5.5 0 0 0 3 7.9c0 5.6 2.9 6.65 6 7-.6.4-1 1.2-1 2.3V21"/></svg>',
-abrir:'<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>'
+abrir:'<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>',
+estrela:'<svg viewBox="0 0 24 24"><path d="m12 2.5 3 6.1 6.7 1-4.85 4.7 1.15 6.7L12 17.85 6 21l1.15-6.7L2.3 9.6l6.7-1Z"/></svg>'
 };
 async function copiar(valor,botao){
 try{await navigator.clipboard.writeText(valor)}catch(e){const t=document.createElement('textarea');t.value=valor;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
@@ -52,20 +84,38 @@ el.className='mini';el.innerHTML=icones[icone];el.title=rotulo;el.setAttribute('
 if(link){el.href=link;el.target='_blank';el.rel='noopener noreferrer'}else{el.type='button'}
 return el
 }
+function renderizar(){
 const fragment=document.createDocumentFragment();
+const pesquisa=normalizar(busca.value.trim());
 nomes.forEach(nome=>{
+if(pesquisa && !normalizar(nome).includes(pesquisa))return;
+if(somenteFavoritos && !favoritos.has(nome))return;
 const site=nome.toLowerCase()==='adriele-almeida.github.io'?'https://adriele-almeida.github.io/':'https://adriele-almeida.github.io/'+encodeURIComponent(nome)+'/';
 const repositorio='https://github.com/Adriele-Almeida/'+encodeURIComponent(nome);
 const item=document.createElement('div');item.className='item';
 const principal=document.createElement('a');principal.className='mainbtn';principal.href=site;principal.target='_blank';principal.rel='noopener noreferrer';principal.title='Abrir site';
 const led=document.createElement('span');led.className='dot';const titulo=document.createElement('span');titulo.className='name';titulo.textContent=nome;principal.append(led,titulo);
 const ferramentas=document.createElement('div');ferramentas.className='tools';
+const estrela=mini('estrela',favoritos.has(nome)?'Remover dos favoritos':'Adicionar aos favoritos');
+estrela.classList.add('favorite');
+if(favoritos.has(nome))estrela.classList.add('active');
+estrela.setAttribute('aria-pressed',String(favoritos.has(nome)));
+estrela.addEventListener('click',()=>{if(favoritos.has(nome))favoritos.delete(nome);else favoritos.add(nome);salvarFavoritos();renderizar()});
 const copiarSite=mini('copiar','Copiar link do site');copiarSite.addEventListener('click',()=>copiar(site,copiarSite));
 const abrirRepo=mini('repositorio','Abrir repositório',repositorio);
 const copiarRepo=mini('copiar','Copiar link do repositório');copiarRepo.addEventListener('click',()=>copiar(repositorio,copiarRepo));
-ferramentas.append(copiarSite,abrirRepo,copiarRepo);item.append(principal,ferramentas);fragment.append(item)
+ferramentas.append(estrela,copiarSite,abrirRepo,copiarRepo);item.append(principal,ferramentas);fragment.append(item)
 });
-root.append(fragment);
+root.replaceChildren(fragment);
+}
+busca.addEventListener('input',renderizar);
+botaoFavoritos.addEventListener('click',()=>{
+somenteFavoritos=!somenteFavoritos;
+botaoFavoritos.classList.toggle('active',somenteFavoritos);
+botaoFavoritos.setAttribute('aria-pressed',String(somenteFavoritos));
+renderizar();
+});
+renderizar();
 </script>
 </body>
 </html>
